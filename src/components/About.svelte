@@ -1,5 +1,5 @@
 <script>
-  let description = "I'm a Frontend Developer";
+  let description = "Simple counter";
   let count = 0;
 
   const handleClick = () => {

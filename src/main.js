@@ -3,8 +3,9 @@ import App from "./App.svelte";
 const app = new App({
   target: document.body,
   props: {
-    name: "Gonzalo",
-    lastName: "Lopez",
+    name: "Svelte",
+    lastName: "JS",
+    year: 2023,
   },
 });
 

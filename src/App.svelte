@@ -1,12 +1,17 @@
 <script>
-  import About from "./components/About.svelte";
-  export let name;
-  export let lastName;
+  import { About, Text, Person } from "./components";
+  export let name, lastName, year;
   let svelteLogo = "https://arepa.s3.amazonaws.com/svelte-logo.png";
+  const data = {
+    name: "Gonzalo",
+    lastName: "Lopez",
+  };
 </script>
 
 <main>
-  <h1>{name} {lastName}!</h1>
+  <h1>{name} {lastName} {year}!</h1>
+  <Person {...data} />
+  <Text text="I'm a Frontend Developer" />
   <About />
   <img src={svelteLogo} alt="Svelte logo" />
 </main>
@@ -35,7 +40,7 @@
   h1 {
     color: #ff3e00;
     text-transform: uppercase;
-    font-size: 4em;
+    font-size: 3em;
     font-weight: 100;
   }
 
