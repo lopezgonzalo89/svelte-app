@@ -1,9 +1,17 @@
 <script>
   let description = "I'm a Frontend Developer";
+  let count = 0;
+
+  const handleClick = () => {
+    count++;
+  };
 </script>
 
 <div class="About">
   <p>{description}</p>
+  <button on:click={handleClick}>
+    Click {count === 0 ? "" : count}
+  </button>
 </div>
 
 <style>
