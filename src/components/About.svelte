@@ -34,7 +34,7 @@
 
 <style>
   p {
-    color: var(--theme-color);
+    color: var(--theme-color-primary);
     font-size: 22px;
   }
 </style>

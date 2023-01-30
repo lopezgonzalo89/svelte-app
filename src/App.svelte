@@ -1,5 +1,5 @@
 <script>
-  import { About, Text, Person } from "./components";
+  import { About, Text, Person, Skills } from "./components";
   export let name, lastName, year;
   let svelteLogo = "https://arepa.s3.amazonaws.com/svelte-logo.png";
   const data = {
@@ -13,22 +13,36 @@
   <Person {...data} />
   <Text text="I'm a Frontend Developer" />
   <About />
+  <Skills />
   <img src={svelteLogo} alt="Svelte logo" />
 </main>
 
 <style>
   :global(body) {
-    background-color: #f2eee2;
-    color: #0086f6;
+    background-color: var(--theme-color-background);
+    color: var(--theme-color-default);
   }
 
   :global(:root) {
-    --theme-color: purple;
+    --theme-color-default: #0086f6;
+    --theme-color-primary: purple;
+    --theme-color-primary-dark: #bf2c7c;
+
+    --theme-color-background: #f2eee2;
+    --theme-color-background-dark: #1d3040;
+
+    --theme-color-secondary: #ff3e00;
+    --theme-color-secondary-dark: #f4b400;
   }
 
   :global(body.dark-mode) {
-    background-color: #1d3040;
-    color: #bf2c7c;
+    background-color: var(--theme-color-background-dark);
+    color: var(--theme-color-primary-dark);
+  }
+
+  :global(body.dark-mode h1) {
+    /* TODO: Remove !important */
+    color: var(--theme-color-secondary-dark) !important;
   }
 
   main {
@@ -44,7 +58,7 @@
   }
 
   h1 {
-    color: #ff3e00;
+    color: var(--theme-color-secondary);
     text-transform: uppercase;
     font-size: 3em;
     font-weight: 100;
