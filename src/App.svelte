@@ -26,6 +26,11 @@
     --theme-color: purple;
   }
 
+  :global(body.dark-mode) {
+    background-color: #1d3040;
+    color: #bf2c7c;
+  }
+
   main {
     text-align: center;
     padding: 1em;
@@ -34,7 +39,8 @@
   }
 
   main img {
-    width: 30%;
+    width: 80%;
+    height: 100%;
   }
 
   h1 {
