@@ -1,5 +1,5 @@
 <script>
-  import { About, Text, Person, Skills, Input } from "./components";
+  import { About, Text, Person, Skills, Input, Photos } from "./components";
   export let name, lastName, year;
   let svelteLogo = "https://arepa.s3.amazonaws.com/svelte-logo.png";
   const data = {
@@ -15,7 +15,8 @@
   <About />
   <Skills />
   <Input />
-  <img src={svelteLogo} alt="Svelte logo" />
+  <Photos />
+  <img src={svelteLogo} alt="Svelte logo" width="80%" height="100%" />
 </main>
 
 <style>
