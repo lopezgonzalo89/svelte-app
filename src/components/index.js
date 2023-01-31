@@ -5,5 +5,6 @@ import Skills from "./Skills.svelte";
 import Input from "./Input.svelte";
 import Button from "./Button.svelte";
 import Photos from "./Photos.svelte";
+import ButtonCount from "./ButtonCount.svelte";
 
-export { About, Text, Person, Skills, Input, Button, Photos };
+export { About, Text, Person, Skills, Input, Button, ButtonCount, Photos };

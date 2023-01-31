@@ -1,5 +1,13 @@
 <script>
-  import { About, Text, Person, Skills, Input, Photos } from "./components";
+  import {
+    About,
+    ButtonCount,
+    Text,
+    Person,
+    Skills,
+    Input,
+    Photos,
+  } from "./components";
   export let name, lastName, year;
   let svelteLogo = "https://arepa.s3.amazonaws.com/svelte-logo.png";
   const data = {
@@ -15,6 +23,7 @@
   <About />
   <Skills />
   <Input />
+  <ButtonCount />
   <Photos />
   <img src={svelteLogo} alt="Svelte logo" width="80%" height="100%" />
 </main>
@@ -35,6 +44,8 @@
 
     --theme-color-secondary: #ff3e00;
     --theme-color-secondary-dark: #f4b400;
+
+    --theme-color-svelte: #f76027;
   }
 
   :global(body.dark-mode) {
