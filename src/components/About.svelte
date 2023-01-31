@@ -1,4 +1,6 @@
 <script>
+  import Button from "./Button.svelte";
+
   let description = "Simple counter";
   let count = 0;
   let styles = { darkMode: false };
@@ -15,9 +17,6 @@
 
 <div class="About">
   <p>{description}</p>
-  <button on:click={handleClick}>
-    Click {count === 0 ? "" : count}
-  </button>
 
   {#if count > 10}
     <p>Count is greater than 10</p>
@@ -26,6 +25,8 @@
   {:else}
     <p>Count is less than 5</p>
   {/if}
+
+  <Button text="Click me" {count} on:click={handleClick} />
 
   <button on:click={handleTheme}>
     {styles.darkMode ? "Light Mode" : "Dark Mode"}
